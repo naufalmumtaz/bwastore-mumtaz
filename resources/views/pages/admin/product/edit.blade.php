@@ -54,7 +54,7 @@ Product
                               <div class="form-group">
                                 <label>Kategori Product</label>
                                 <select name="categories_id" id="categories_id" class="form-control">
-                                  <option value="{{ $item->categories }}" selected>{{ $item->category->name }}</option>
+                                  <option value="{{ $item->categories_id  }}" selected>{{ $item->category->name }}</option>
                                   @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                   @endforeach

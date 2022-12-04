@@ -47,6 +47,11 @@
             >Categories</a
             >
             <a
+              href="{{ route('transaction.index') }}"
+              class="list-group-item list-group-item-action {{ (request()->is('admin/transaction*')) ? 'active' : '' }}"
+              >Transactions</a
+            >
+            <a
               href="{{ route('user.index') }}"
               class="list-group-item list-group-item-action {{ (request()->is('admin/user*')) ? 'active' : '' }}"
               >Users</a
@@ -100,7 +105,7 @@
                       alt=""
                       class="rounded-circle mr-2 profile-picture"
                     />
-                    Hi, Rina
+                    Hi, {{ Auth::user()->name }}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/">Logout</a>
